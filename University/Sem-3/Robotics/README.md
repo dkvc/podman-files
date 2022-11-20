@@ -8,7 +8,7 @@
 2. Create empty directory with any name (e.g: workdir)
 3. Build the container using Podman
 ```
-podman build -t robotics:python
+podman build -t robotics:python .
 ```
 
 4. Run the container and mount the empty directory with read-write permissions. Set the user ID of container to host user ID.
