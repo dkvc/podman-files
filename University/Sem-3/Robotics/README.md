@@ -1,7 +1,7 @@
 # Build (Using Podman)
 ## Prerequisites
 1. Requires Internet Connection
-2. [Podman] (https://podman.io)
+2. ![Podman](https://podman.io)
 
 ## Steps
 1. After Installing Podman, create a new directory and put Dockerfile and requirements.txt from the repository into the directory.
@@ -21,17 +21,17 @@ podman run --userns=keep-id -v $PWD/workdir:/home/toolbox/workdir:Z -d --name ro
 ## Post-Container Steps
 1. If you want to open the container again after closing:
 ```
-podman start expos
+podman start robotics
 ```
 
 If you want to go into interactive shell mode:
 ```
-podman exec -it expos /bin/bash
+podman exec -it robotics /bin/bash
 ```
 
-2. If you want to use containers in VSCode, make sure to install [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.
+2. If you want to use containers in VSCode, make sure to install ![Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.
 
 3. If you want to stop the container:
 ```
-podman stop expos
+podman stop robotics
 ```
