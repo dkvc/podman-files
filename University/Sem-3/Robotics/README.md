@@ -4,7 +4,7 @@
 2. ![Podman](https://podman.io)
 
 ## Steps
-1. After Installing Podman, create a new directory and put Dockerfile and requirements.txt from the repository into the directory.
+1. After Installing Podman, create a new directory and copy Dockerfile and requirements.txt from the repository into the directory.
 2. Create empty directory with any name (e.g: workdir)
 3. Build the container using Podman
 ```
