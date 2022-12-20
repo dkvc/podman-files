@@ -13,7 +13,7 @@ podman build -t expos:ubuntu20.04 .
 
 4. Run the container and mount the empty directory with read-write permissions. Set the user ID of container to host user ID.
 ```
-podman run --userns=keep-id -v $PWD/workdir:/home/toolbox/workdir:Z -d --name expos -i expos:ubuntu20.04
+podman run --userns=keep-id -v $PWD/workdir:/home/expos/workdir:Z -d --name expos -i expos:ubuntu20.04
 ```
 
 5. Execute the container/Connect using VSCode (Make sure to install Python extensions if used in VSCode)
