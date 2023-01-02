@@ -1,7 +1,7 @@
 # Build (Using Podman)
 ## Prerequisites
 1. Requires Internet Connection
-2. ![Podman](https://podman.io)
+2. [Podman](https://podman.io)
 
 ## Steps
 1. After Installing Podman, create a new directory and copy Dockerfile and requirements.txt from the repository into the directory.
