@@ -3,22 +3,22 @@
 ???+ danger "Storing your files"
     Make sure to store your files in corresponding directory to avoid losing your files while updating containers.
 
-- Pull the corresponding image from my repository. Don't worry! You don't have to download everything again.
-```bash
-podman pull quay.io/dkvc/tf:tag
-```
-where `tag` is the corresponding tag you've used for [Tensorflow image](../tensorflow-installation/#select-a-image).
 
-???+ info
-    If you don't want to pull from my repository, you can create a file named `Dockerfile` and copy the following text:
-    ```Dockerfile
-    FROM tensorflow:latest-gpu-jupyter
-    
-    RUN useradd -m tf
-    USER tf
-    
-    WORKDIR /home/tf/
-    ```
+
+
+
+
+
+
+If you don't want to pull from my repository, you can create a file named `Dockerfile` and copy the following text:
+```Dockerfile
+FROM tensorflow:latest-gpu-jupyter
+
+RUN useradd -m tf
+USER tf
+
+WORKDIR /home/tf/
+```
 
 - Build the container using your own tag name (e.g.: `tftest:tensorflow`)
 ```bash
