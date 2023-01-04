@@ -14,7 +14,7 @@ NVIDIA Container Runtime is tested on:
 (In case of Docker, Docker >= 19.03 (recommended, but some distributions may include older versions of Docker. The minimum supported version is 1.12))
 ???+ tip
 
-    You can check your podman version by running `podman --version` in your Linux terminal.
+    You can check your podman version by running `podman --version` in your Linux terminal. In case of Docker, you can check its version using `docker --version`.
     
 - NVIDIA GPU with Architecture >= Kepler (or compute capability 3.0)
 ???+ tip
