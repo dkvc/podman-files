@@ -10,7 +10,7 @@
 
 
 
-If you don't want to pull from my repository, you can create a file named `Dockerfile` and copy the following text:
+- If you don't want to pull from my repository, you can create a file named `Dockerfile` and copy the following text:
 ```Dockerfile
 FROM tensorflow:latest-gpu-jupyter
 
