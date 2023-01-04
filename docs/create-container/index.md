@@ -1,14 +1,7 @@
 ## Creating a Container
 - Create a new directory for storing your project files (e.g. `workdir`).
-???+ danger "Storing your files"
+???+ danger "Storing your files" (Not Required for Docker users)
     Make sure to store your files in corresponding directory to avoid losing your files while updating containers.
-
-
-
-
-
-
-
 
 - Create a file named `Dockerfile` and copy the following text:
 ```Dockerfile
