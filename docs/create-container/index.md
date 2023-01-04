@@ -1,6 +1,6 @@
 ## Creating a Container
 - Create a new directory for storing your project files (e.g. `workdir`).
-???+ danger "Storing your files" (Not Required for Docker users)
+???+ danger "Storing your files"
     Make sure to store your files in corresponding directory to avoid losing your files while updating containers.
 
 - Create a file named `Dockerfile` and copy the following text:
@@ -24,7 +24,7 @@ To run the container using Podman, use the following command:
 podman run --security-opt=label=disable --hooks-dir=/usr/share/containers/oci/hooks.d/ -v $PWD/workdir:/home/tf/workdir:Z -d --name tftest -i tftest:tensorflow
 ```
 
-???+ info "Avoiding Permission Issues"
+???+ info "Avoiding Permission Issues (Not Required for Docker users)"
     If you want to avoid permission issues everytime when you share any file between container and host using shared folder, you can use the following command both inside and outside the container (not recommended).
     ```
     chmod 777 workdir
