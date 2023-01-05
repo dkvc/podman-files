@@ -33,11 +33,8 @@ podman run --security-opt=label=disable --hooks-dir=/usr/share/containers/oci/ho
     podman exec -it tftest jupyter notebook
     ```
 
-???+ info "Avoiding Permission Issues (Not Required for Docker users)"
-    If you want to avoid permission issues everytime when you share any file between container and host using shared folder, you can use the following command both inside and outside the container (not recommended).
-    ```
-    chmod 777 workdir
-    ```
+???+ info "Avoiding Permission Issues"
+    Sometimes, there can be permission issues while copying or moving a file. You can just change the corresponding file permission to `Read and Write`. A permanent fix is currently work in progress.
     
 ## Post-Container Steps
 - If you want to open the contaner again after closing:
