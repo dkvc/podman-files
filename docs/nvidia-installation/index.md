@@ -25,7 +25,7 @@ NVIDIA Container Runtime is tested on:
 ???+ note
     Your driver version might limit your CUDA capabilities. Newer NVIDIA drivers are backwards-compatible with CUDA versions, but each new version of CUDA requires a minimum driver version. Running a CUDA container requires a machine with at least one CUDA-capable GPU and a driver compatible with the CUDA version you are using. The machine running the CUDA container only requires the NVIDIA driver, the CUDA toolkit doesn’t have to be installed. The [CUDA release notes](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#cuda-major-component-versions) includes a table of the minimum driver and CUDA versions.
     
-## Setting up NVIDIA Container Runtime
+## Set up NVIDIA Container Runtime
 1. Set `distribution` value temporarily to `rhel9.0`; since NVIDIA doesn't directly support Fedora due to rolling release.
 ```bash
 distribution=rhel9.0
@@ -73,7 +73,7 @@ Architecture:   /* GPU Architecture */
     ```
     - Restart your system to make changes.
 
-## Making sure hook is present
+## Make sure hook is present
 Unlike Docker, Podman doesn't run on root. In order to make sure NVIDIA GPU is detected by Podman, a hook is needed. 
 
 ???+ info

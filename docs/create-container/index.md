@@ -1,4 +1,4 @@
-## Creating a Image (Optional - but Recommended)
+## Create a Image (Optional - but Recommended)
 ???+ info "Optional"
     This step is optional, but it is recommended because this allows you to work as a non-root user inside a container.
 
@@ -21,7 +21,7 @@ WORKDIR /home/tf/
 podman build -t tftest:tensorflow .
 ```
 
-## Running the Container
+## Run Container
 To run the container using Podman, use the following command:
 ```
 podman run --security-opt=label=disable --hooks-dir=/usr/share/containers/oci/hooks.d/ -v $PWD/workdir:/home/tf/workdir:Z -d --name tftest -i tftest:tensorflow
