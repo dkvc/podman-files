@@ -54,3 +54,4 @@ nav:
   - NVIDIA Installation: nvidia-installation/index.md
   - Tensorflow Installation: tensorflow-installation/index.md
   - Container: create-container/index.md
+  - Running a GUI: running-gui/index.md
