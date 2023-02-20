@@ -4,10 +4,10 @@ Open your host terminal and run the following command: (The plus sign is optiona
 xhost +local:podman
 ```
 ???+ info "Using Docker"
-If you are running `docker`, change `podman` to `docker` in the corresponding command:
-```
-xhost +local:docker
-```
+    If you are running `docker`, change `podman` to `docker` in the corresponding command:
+    ```
+    xhost +local:docker
+    ```
 
 # Connect container display to current host display
 In the following command, `-e DISPLAY=$DISPLAY` syncs your environment variable `DISPLAY` from host system to container.
