@@ -1,4 +1,7 @@
-## Creating a Container
+## Creating a Image (Optional - but Recommended)
+???+ info "Optional"
+    This step is optional, but it is recommended because this allows you to work as a non-root user inside a container.
+
 - Create a new directory for storing your project files (e.g. `workdir`).
 ???+ danger "Storing your files"
     Make sure to store your files in corresponding directory to avoid losing your files while updating containers.
@@ -13,7 +16,7 @@ USER tf
 WORKDIR /home/tf/
 ```
 
-- Build the container using your own tag name (e.g.: `tftest:tensorflow`)
+- Build the image using your own tag name (e.g.: `tftest:tensorflow`)
 ```bash
 podman build -t tftest:tensorflow .
 ```
@@ -34,7 +37,7 @@ podman run --security-opt=label=disable --hooks-dir=/usr/share/containers/oci/ho
     ```
 
 ???+ info "Avoiding Permission Issues"
-    Sometimes, there can be permission issues while copying or moving a file. You can just change the corresponding file permission to `Read and Write`. A permanent fix is currently work in progress.
+    Sometimes, there can be permission issues while copying or moving a file. You can just change the corresponding file permissions on host system for folder to `Read and Write`. A permanent fix is currently being worked on.
     
 ## Post-Container Steps
 - If you want to open the contaner again after closing:
