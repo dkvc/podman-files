@@ -1,4 +1,4 @@
-# Allow host system to use X Display Server
+## Allow host system to use X Display Server
 Open your host terminal and run the following command: (The plus sign is optional)
 ```
 xhost +local:podman
@@ -9,7 +9,7 @@ xhost +local:podman
     xhost +local:docker
     ```
 
-# Connect container display to current host display
+## Connect container display to current host display
 In the following command, `-e DISPLAY=$DISPLAY` syncs your environment variable `DISPLAY` from host system to container.
 ```
 podman run -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --security-opt=label=disable --hooks-dir=/usr/share/containers/oci/hooks.d/ -d --name <name> -i <image>
