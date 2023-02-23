@@ -14,7 +14,7 @@ xhost +local:podman
 ???+ info "For Non-NVIDIA users"
     If you don't have NVIDIA graphics card installed or NVIDIA graphics is not required in container, then you can use the following command:
     ```
-    podman run --userns=keep-id -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -d --name <name> -i <image>
+    podman run --security-opt=label=disable -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -d --name <name> -i <image>
     ```
 
 In the following command, `-e DISPLAY=$DISPLAY` syncs your environment variable `DISPLAY` from host system to container.
@@ -29,5 +29,11 @@ For example, if there exists a image tagged `ros:latest` on your system, the com
 ```
 podman run -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --security-opt=label=disable --hooks-dir=/usr/share/containers/oci/hooks.d/ -v $PWD/ROS:/home/ROS:Z -d --name ros2 -i ros:latest
 ```
+
+???+ tip "Aliasing"
+    If you want to alias any word to automate this process, you can add the following line to your ~/.bashrc file: (For example, for ros2)
+    ```
+    alias ros2="(xhost +local:podman) && (podman exec -it ros2 /bin/bash)"
+    ```
 
 For remaining steps, you can follow [Container](https://dkvc.github.io/podman-files/create-container/) documentation.
