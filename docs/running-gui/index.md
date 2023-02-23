@@ -10,6 +10,13 @@ xhost +local:podman
     ```
 
 ## Connect container display to current host display
+
+???+ info "For Non-NVIDIA users"
+    If you don't have NVIDIA graphics card installed or NVIDIA graphics is not required in container, then you can use the following command:
+    ```
+    podman run --userns=keep-id -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -d --name <name> -i <image>
+    ```
+
 In the following command, `-e DISPLAY=$DISPLAY` syncs your environment variable `DISPLAY` from host system to container.
 ```
 podman run -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --security-opt=label=disable --hooks-dir=/usr/share/containers/oci/hooks.d/ -d --name <name> -i <image>
