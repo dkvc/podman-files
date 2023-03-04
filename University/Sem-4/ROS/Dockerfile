@@ -8,6 +8,7 @@ RUN rm bashaliases.sh
 
 RUN apt update && apt-get update
 
+RUN apt install apt-utils -y
 RUN apt install ros-humble-turtlesim -y
 RUN apt install ~nros-humble-rqt* -y
 
