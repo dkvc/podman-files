@@ -60,7 +60,7 @@ Architecture:   /* GPU Architecture */
 ```
 ???+ info
 
-    If nvidia-container-runtime is not working correctly, it might be probably SELinux issue:
+    For rootless containers (non-privileged podman):
     
     - Open `/etc/nvidia-container-runtime/config.toml` (if not present, check if your [NVIDIA Driver](#nvidia-drivers) is working correctly.
     - Change the following line
